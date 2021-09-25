@@ -1,7 +1,5 @@
-# Form-Samarjeet-Banik
-Web site Development Session 1 -(Form -Sign in ) - Best Session 
+# [Basic SignIn/SignUp website](https://warmachine028.github.io/Form-Samarjeet-Banik/)
 
-A Basic Sing In Sign Up From Website from a webinar Tutorial.  
-Will be adding more stuff tomorrow.
-
-Current Preview:  
+- A Basic Sing In Sign Up From Website from a webinar Tutorial. 
+- With HTML and CSS
+- Will be adding more stuff tomorrow.
