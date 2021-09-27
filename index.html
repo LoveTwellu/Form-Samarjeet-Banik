@@ -17,14 +17,17 @@
 						<input type="text" placeholder="Username" />
 						<input type="password" placeholder="Password" />
 						<input type="submit" value="Login" />
-						<p class="foot">Don't have an account? <a href="#">Sign Up</a></p>
+						<p class="foot">
+							Don't have an account?
+							<a href="#" onclick="toggleForm()">Sign Up</a>
+						</p>
 					</form>
 				</div>
 			</div>
 
-			<!-- <div>
+			<div class="signup">
 				<div class="img"><img src="images/sign-up.jpg" /></div>
-				<div>
+				<div class="form">
 					<form>
 						<h2>CREATE AN ACCOUNT</h2>
 						<input type="text" placeholder="Username" />
@@ -32,10 +35,19 @@
 						<input type="password" placeholder="Create Password" />
 						<input type="password" placeholder="Confirm Password" />
 						<input type="submit" value="Sign Up" />
-						<p>Already have an account? <a href="#">Sign In</a></p>
+						<p class="foot">
+							Already have an account?
+							<a href="#" onclick="toggleForm()">Sign In</a>
+						</p>
 					</form>
 				</div>
-			</div> -->
+			</div>
 		</div>
+		<script>
+			function toggleForm() {
+				var container = document.querySelector(".container");
+				container.classList.toggle("active");
+			}
+		</script>
 	</body>
 </html>

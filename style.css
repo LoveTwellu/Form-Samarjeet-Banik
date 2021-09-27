@@ -1,101 +1,170 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
 }
 
 body {
-  position: relative;
-  background: #557085;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  display: flex;
+	position: relative;
+	background: #557085;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	display: flex;
 }
 
 .container {
-  position: relative;
-  width: 800px;
-  height: 500px;
-  background: white;
-  transition: 0.5s;
+	position: relative;
+	width: 800px;
+	height: 500px;
+	background: rgb(232, 230, 230);
+	transition: 0.5s;
+	overflow: hidden;
 }
 
 .img {
-  position: relative;
-  width: 50%;
-  height: 100%;
-  transition: 0.5s;
+	position: relative;
+	width: 50%;
+	height: 100%;
+	transition: 0.5s;
 }
 
 img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
-.signin {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
+.signin,
+.signup {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
 }
 
 .form {
-  position: relative;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
+	position: relative;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	transition: 0.5s;
 }
 
 .form h2 {
-  font-size: 18px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  width: 100%;
-  margin-bottom: 10px;
-  color: #555;
+	font-size: 18px;
+	font-weight: 800;
+	letter-spacing: 2px;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 10px;
+	color: #555;
 }
 
 .form input {
-  width: 100%;
-  padding: 10px;
-  background: #f5f5f5;
-  color: #333;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  font-size: 15px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  letter-spacing: 1px;
+	width: 100%;
+	padding: 10px;
+	background: #f5f5f5;
+	color: #333;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	font-size: 15px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	letter-spacing: 1px;
+	border-radius: 1mm;
 }
 
 .form input[type="submit"] {
-  max-width: 100px;
-  background: #677eff;
-  color: #fff;
-  cursor: pointer;
-  letter-spacing: 1px;
-  margin-top: 10px;
+	max-width: 100px;
+	background: #677eff;
+	color: #fff;
+	cursor: pointer;
+	letter-spacing: 1px;
+	margin-top: 10px;
+	border-radius: 1mm;
 }
 
 .foot {
-  margin-top: 15px;
+	margin-top: 15px;
 }
 
 .foot a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .foot a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
+}
+
+/* To Hide and unhide SignUp form on clicking signup */
+
+.container .signup {
+	pointer-events: none;
+}
+
+.container.active .signup {
+	pointer-events: visible;
+}
+
+/* Animating Visibility of SignIn Page */
+.signin .form {
+	top: 0;
+}
+
+.container.active .signin .form {
+	top: 100%;
+}
+
+.signin .img {
+	top: 0;
+}
+
+.container.active .signin .img {
+	top: -100%;
+}
+
+/* Animating Visibility of SignUp Page */
+.signup .form {
+	top: -100%;
+}
+
+.container.active .signup .form {
+	top: 0;
+}
+
+.signup .img {
+	top: 100%;
+}
+
+.container.active .signup .img {
+	top: 0;
+}
+
+/* END */
+
+/* FOR mobile view*/
+@media (max-width: 430px) {
+	.container {
+		max-width: 400px;
+	}
+
+	.container img {
+		display: none;
+	}
+
+	.container .signin .form,
+	.container .signup .form {
+		margin-left: -50%;
+		width: 100%;
+	}
 }
