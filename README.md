@@ -5,6 +5,7 @@
 ## Whats New?
 
 - Now Signup Page works by clicking on Sign Up
+- Added Mobile View
 - Added Transitions
 
 ## Table of Contents

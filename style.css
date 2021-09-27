@@ -108,7 +108,7 @@ img {
 
 /* To Hide and unhide SignUp form on clicking signup */
 
-.container .signup {
+.signup {
 	pointer-events: none;
 }
 
@@ -153,6 +153,7 @@ img {
 /* END */
 
 /* FOR mobile view*/
+
 @media (max-width: 430px) {
 	.container {
 		max-width: 400px;
